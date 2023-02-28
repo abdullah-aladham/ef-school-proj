@@ -10,6 +10,7 @@ namespace ConsoleApp2.Data
 {
     internal class ConsoleApp2Context:DbContext
     {
+        public ConsoleApp2Context(DbContextOptions<ConsoleApp2Context> options) : base(options) { }
         public DbSet<Teacher>  Teachers { get; set; }
         public DbSet<Student> Students { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
